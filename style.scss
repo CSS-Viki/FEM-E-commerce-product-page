@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+$font-default: "Kumbh Sans", sans-serif;
+$Orange: hsl(26, 100%, 55%);
+$Pale-orange: hsl(25, 100%, 94%);
+$Very-dark-blue: hsl(220, 13%, 13%);
+$Dark-grayish-blue: hsl(219, 9%, 45%);
+$Grayish-blue: hsl(220, 14%, 75%);
+$Light-grayish-blue: hsl(223, 64%, 98%);
+$White: hsl(0, 0%, 100%);
+$Black: hsl(0, 0%, 0%);
+$transition: all 0.4s ease;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: $font-default;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 1rem;
+  // font-size: clamp(1rem, 0.79rem + 0.89vw, 1.125rem);
+
+  line-height: 1.5;
+}
+body {
+  font-family: $font-default;
+}
+
+@mixin flex-items {
+  display: flex;
+  align-items: center;
+}
+@mixin wrapper-styles {
+  width: calc(100% - 2rem);
+  max-width: 1110px;
+  margin-inline: auto;
+}
+@mixin wrapper-styles-mobile {
+  width: calc(100% - 3.75rem);
+}
+
+@import "components/header";
+@import "components/main";
+
+
+
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-block-start: 50px;
+}
+.attribution a {
+  color: $Orange;
+}

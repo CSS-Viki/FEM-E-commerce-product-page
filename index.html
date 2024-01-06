@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <header>
+      <div class="header wrapper">
+        <div class="logo-class">
+          <a class="menu-icon" href="#"
+            ><img src="./images/icon-menu.svg" alt="menu icon"
+          /></a>
+          <a href="#" class="logo">sneakers</a>
+        </div>
+        <nav>
+          <ul class="nav-lists nav-lists-primary">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
+          <ul class="nav-lists nav-lists-secondary">
+            <li>
+              <div class="cart-count">
+                <span></span>
+              </div>
+              <img
+                class="cart-icon"
+                src="./images/icon-cart.svg"
+                alt="cart icon"
+              />
+            </li>
+            <li>
+              <img
+                class="avatar"
+                src="./images/image-avatar.png"
+                alt="profile avatar"
+              />
+            </li>
+          </ul>
+        </nav>
+
+        <div class="checkout-container">
+          <h1>Cart</h1>
+          <div class="checkout-details">
+            <img src="./images/image-product-1.jpg" alt="image-product-1" />
+            <div class="checkout-product-price">
+              <p>Fall limited edition sneakers</p>
+              <p>
+                <span>$125.00</span> * <span class="counted-items">3</span>
+                <strong class="payout-total" style="color: #000">$125</strong>
+              </p>
+            </div>
+            <img
+              class="delete"
+              src="./images/icon-delete.svg"
+              alt="icon-delete"
+            />
+          </div>
+          <!-- <p class="cart-empty">Your cart is Empty.</p> -->
+          <button class="checkout">Checkout</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="products">
+        <div class="primary-product">
+          <img src="./images/image-product-1.jpg" alt="image product" />
+        </div>
+
+        <div class="slider-products">
+          <img src="./images/image-product-1.jpg" alt="" />
+          <img src="./images/image-product-2.jpg" alt="" />
+          <img src="./images/image-product-3.jpg" alt="" />
+          <img src="./images/image-product-4.jpg" alt="" />
+        </div>
+      </div>
+
+      <!-- POPUP -->
+      <div class="popup">
+        <div class="primary-product-popup">
+          <img class="close-btn" src="./images/icon-close.svg" alt="close" />
+          <img
+            class="previous-icon"
+            src="./images/icon-previous.svg"
+            alt="previous icon"
+          />
+          <img
+            class="primary-product-popup-image"
+            src="./images/image-product-1.jpg"
+            alt="image product"
+          />
+          <img
+            class="next-icon"
+            src="./images/icon-next.svg"
+            alt="previous icon"
+          />
+        </div>
+
+        <div class="slider-products-popup">
+          <img src="./images/image-product-1.jpg" alt="" />
+          <img src="./images/image-product-2.jpg" alt="" />
+          <img src="./images/image-product-3.jpg" alt="" />
+          <img src="./images/image-product-4.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="product-details">
+        <p class="product-details-headline">SNEAKER COMPANY</p>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p class="product-details-description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+
+        <div class="product-details-price">
+          <p class="price">$125.00 <span>50%</span></p>
+          <p class="discount">$250.00</p>
+        </div>
+
+        <div class="control-buttons">
+          <div class="add-or-minus">
+            <span class="minus">-</span>
+            <span class="amount">0</span>
+            <span class="add">+</span>
+          </div>
+          <button id="add-to-cart">
+            <img src="./images/icon-cart.svg" alt="cart" />Add to cart
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://twitter.com/vykiddeh_">Viki Wainaina</a>.
+    </div>
+  </body>
+</html>

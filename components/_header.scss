@@ -1,0 +1,210 @@
+header {
+  .wrapper {
+    @include wrapper-styles();
+  }
+
+  .header {
+    @include flex-items();
+    position: relative;
+    padding-block: 1.5em;
+    border-bottom: 1px solid red;
+
+    .logo-class {
+      @include flex-items();
+      margin-right: 50px;
+
+      .menu-icon {
+        padding-top: 5px;
+        display: none;
+      }
+      .active {
+        transition: $transition;
+        transform: rotate(-90deg);
+      }
+      .logo {
+        font-weight: 700;
+        color: $Black;
+        font-size: 2rem;
+      }
+    }
+
+    nav {
+      @include flex-items();
+      justify-content: space-between;
+      flex: 1;
+
+      .nav-lists {
+        @include flex-items();
+        gap: 30px;
+
+        li {
+          list-style: none;
+
+          a {
+            color: $Grayish-blue;
+            padding-bottom: 2em;
+            transition: $transition;
+          }
+          a:hover {
+            border-bottom: 3px solid $Orange;
+            color: $Black;
+          }
+        }
+        .cart-icon {
+          cursor: pointer;
+        }
+        .avatar {
+          width: 42px;
+          border: 2px solid transparent;
+          border-radius: 50%;
+          transition: $transition;
+        }
+        .avatar:hover {
+          border: 2px solid $Orange;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+      .nav-lists-secondary {
+        li:first-child {
+          position: relative;
+
+          .cart-count {
+            position: absolute;
+            display: none;
+            place-content: center;
+            padding: 0.2em 0.4em;
+            right: -6px;
+            top: -12px;
+            border-radius: 5px;
+            background-color: $Orange;
+            cursor: pointer;
+
+            span {
+              font-size: 0.6rem;
+              color: $White;
+            }
+          }
+          .open-cart {
+            display: grid;
+          }
+        }
+      }
+    }
+
+    .checkout-container {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 80%;
+      width: min(100%, 350px);
+      border-radius: 6px;
+      padding-block: 1.5em;
+      background-color: $White;
+      padding-inline: 1.5em;
+      box-shadow: 10px 10px 25px 2px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 10px 10px 25px 2px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 10px 10px 25px 2px rgba(0, 0, 0, 0.3);
+      z-index: 1;
+
+      h1 {
+        font-weight: 700;
+        font-size: 1.2rem;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $Dark-grayish-blue;
+      }
+      .checkout-details {
+        display: none;
+        @include flex-items();
+        justify-content: space-between;
+        margin-block-start: 1.5em;
+        img {
+          width: 70px;
+          border-radius: 6px;
+        }
+        
+        .delete {
+          width: 16px;
+          cursor: pointer;
+        }
+
+        .checkout-product-price {
+          p {
+            color: $Dark-grayish-blue;
+            font-size: 0.8rem;
+          }
+        }
+      
+      
+    }
+      button {
+        width: 100%;
+        border: none;
+        outline: none;
+        color: $White;
+        font-weight: 700;
+        padding: 1em;
+        background-color: $Orange;
+        border-radius: 8px;
+        margin-top: 1.5em;
+        cursor: pointer;
+        transition: $transition;
+      }
+      button:hover {
+        opacity: 0.7;
+      }
+    }
+    .open-checkout-container {
+      display: block;
+    }
+  }
+}
+/* 600px */
+@media (max-width: 37.5em) {
+  header {
+    .header {
+      border-bottom: none;
+      .logo-class {
+        .menu-icon {
+          display: block;
+          margin-inline-end: 15px;
+          z-index: 9999;
+        }
+      }
+      nav {
+        .nav-lists-primary {
+          display: none;
+        }
+        .open {
+          position: fixed;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          bottom: 0;
+          top: 0;
+          left: 0;
+          width: 70vw;
+          padding: 8em 1em;
+          box-shadow: -195px 0px 400px 200px $Black;
+          background-color: $White;
+          z-index: 1;
+
+          li {
+            a {
+              font-weight: 700;
+              color: $Black;
+              padding-bottom: 0.5em;
+            }
+          }
+        }
+        .nav-lists-secondary {
+          @include flex-items();
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  .wrapper {
+    width: calc(100% - 3.75rem);
+  }
+}

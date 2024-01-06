@@ -32,6 +32,6 @@ Your users should be able to:
 - Flexbox
 - CSS Grid
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site](https://e-commerce-product-page-d7vq.onrender.com)
 
 **Have fun building!** 🚀

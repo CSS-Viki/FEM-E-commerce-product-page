@@ -4,10 +4,10 @@ header {
   }
 
   .header {
-    @include flex-items();
     position: relative;
+    @include flex-items(); //d:flex & align-items:center
     padding-block: 1.5em;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid $Grayish-blue;
 
     .logo-class {
       @include flex-items();
@@ -93,50 +93,59 @@ header {
     }
 
     .checkout-container {
-      display: none;
       position: absolute;
+      display: none;
       right: 0;
       top: 80%;
       width: min(100%, 350px);
+      max-width: 350px;
       border-radius: 6px;
       padding-block: 1.5em;
       background-color: $White;
       padding-inline: 1.5em;
-      box-shadow: 10px 10px 25px 2px rgba(0, 0, 0, 0.3);
-      -webkit-box-shadow: 10px 10px 25px 2px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: 10px 10px 25px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: 10px 10px 25px 2px $Black;
+      -webkit-box-shadow: 10px 10px 25px 2px $Black-box-shadow;
+      -moz-box-shadow: 10px 10px 25px 2px $Black-box-shadow;
       z-index: 1;
 
       h1 {
         font-weight: 700;
         font-size: 1.2rem;
         padding-bottom: 20px;
-        border-bottom: 1px solid $Dark-grayish-blue;
+      }
+      hr {
+        border: 0; /* Remove the default border */
+        height: 0.5px;
+        background-color: $Grayish-blue;
+        width: calc(100% + 3rem);
+        margin-left: -1.5rem;
       }
       .checkout-details {
-        display: none;
         @include flex-items();
         justify-content: space-between;
         margin-block-start: 1.5em;
+        width: 100%;
+
         img {
           width: 70px;
           border-radius: 6px;
         }
-        
+        .checkout-product-price {
+          p {
+            color: $Dark-grayish-blue;
+            font-size: clamp(0.7rem, 0.3636rem + 0.7273vw, 1rem);
+          }
+
+          strong {
+            margin-left: 5px;
+            color: $Black;
+          }
+        }
         .delete {
           width: 16px;
           cursor: pointer;
         }
-
-        .checkout-product-price {
-          p {
-            color: $Dark-grayish-blue;
-            font-size: 0.8rem;
-          }
-        }
-      
-      
-    }
+      }
       button {
         width: 100%;
         border: none;
@@ -162,6 +171,10 @@ header {
 /* 600px */
 @media (max-width: 37.5em) {
   header {
+    .wrapper {
+      width: calc(100% - 3.75rem);
+    }
+
     .header {
       border-bottom: none;
       .logo-class {
@@ -202,9 +215,13 @@ header {
           margin-left: auto;
         }
       }
+      .checkout-container {
+        .checkout-details {
+          img {
+            width: 50px;
+          }
+        }
+      }
     }
-  }
-  .wrapper {
-    width: calc(100% - 3.75rem);
   }
 }

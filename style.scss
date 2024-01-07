@@ -9,6 +9,7 @@ $Grayish-blue: hsl(220, 14%, 75%);
 $Light-grayish-blue: hsl(223, 64%, 98%);
 $White: hsl(0, 0%, 100%);
 $Black: hsl(0, 0%, 0%);
+$Black-box-shadow: hsla(0, 0%, 0%, 0.263);
 $transition: all 0.4s ease;
 
 *,
@@ -38,12 +39,11 @@ a {
 }
 p {
   font-size: 1rem;
-  // font-size: clamp(1rem, 0.79rem + 0.89vw, 1.125rem);
-
   line-height: 1.5;
 }
 body {
   font-family: $font-default;
+  background-color: $White;
 }
 
 @mixin flex-items {
@@ -61,14 +61,5 @@ body {
 
 @import "components/header";
 @import "components/main";
+@import "components/attribution";
 
-
-
-.attribution {
-  font-size: 0.8rem;
-  text-align: center;
-  margin-block-start: 50px;
-}
-.attribution a {
-  color: $Orange;
-}

@@ -13,7 +13,8 @@
     <script src="script.js" defer></script>
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
-  <body>
+  <body class="darkmode">
+    <!-- HEADER -->
     <header>
       <div class="header wrapper">
         <div class="logo-class">
@@ -54,13 +55,14 @@
 
         <div class="checkout-container">
           <h1>Cart</h1>
+          <hr />
           <div class="checkout-details">
             <img src="./images/image-product-1.jpg" alt="image-product-1" />
             <div class="checkout-product-price">
               <p>Fall limited edition sneakers</p>
               <p>
                 <span>$125.00</span> * <span class="counted-items">3</span>
-                <strong class="payout-total" style="color: #000">$125</strong>
+                <strong class="payout-total">$125</strong>
               </p>
             </div>
             <img
@@ -82,35 +84,6 @@
         </div>
 
         <div class="slider-products">
-          <img src="./images/image-product-1.jpg" alt="" />
-          <img src="./images/image-product-2.jpg" alt="" />
-          <img src="./images/image-product-3.jpg" alt="" />
-          <img src="./images/image-product-4.jpg" alt="" />
-        </div>
-      </div>
-
-      <!-- POPUP -->
-      <div class="popup">
-        <div class="primary-product-popup">
-          <img class="close-btn" src="./images/icon-close.svg" alt="close" />
-          <img
-            class="previous-icon"
-            src="./images/icon-previous.svg"
-            alt="previous icon"
-          />
-          <img
-            class="primary-product-popup-image"
-            src="./images/image-product-1.jpg"
-            alt="image product"
-          />
-          <img
-            class="next-icon"
-            src="./images/icon-next.svg"
-            alt="previous icon"
-          />
-        </div>
-
-        <div class="slider-products-popup">
           <img src="./images/image-product-1.jpg" alt="" />
           <img src="./images/image-product-2.jpg" alt="" />
           <img src="./images/image-product-3.jpg" alt="" />
@@ -143,11 +116,41 @@
           </button>
         </div>
       </div>
+
+      <!-- POPUP -->
+      <div class="popup">
+        <div class="primary-product-popup">
+          <img class="close-btn" src="./images/icon-close.svg" alt="close" />
+          <img
+            class="previous-icon"
+            src="./images/icon-previous.svg"
+            alt="previous icon"
+          />
+          <img
+            class="primary-product-popup-image"
+            src="./images/image-product-1.jpg"
+            alt="image product"
+          />
+          <img
+            class="next-icon"
+            src="./images/icon-next.svg"
+            alt="previous icon"
+          />
+        </div>
+
+        <div class="slider-products-popup">
+          <img src="./images/image-product-1.jpg" alt="" />
+          <img src="./images/image-product-2.jpg" alt="" />
+          <img src="./images/image-product-3.jpg" alt="" />
+          <img src="./images/image-product-4.jpg" alt="" />
+        </div>
+      </div>
     </main>
 
+    <!-- ATTRIBUTION -->
     <div class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a href="https://www.frontendmentor.io/profile/CSS-Viki" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="https://twitter.com/vykiddeh_">Viki Wainaina</a>.
     </div>

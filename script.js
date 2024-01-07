@@ -10,20 +10,15 @@ const selectedImagePrimary = document.querySelector(".primary-product img");
 const previous = document.querySelector(".previous-icon");
 const next = document.querySelector(".next-icon");
 
-selectedImagePrimary.addEventListener("click", () => {
-  document.querySelector(".popup").classList.add("active");
-  document.querySelector(".close-btn").addEventListener("click", () => {
-    if (document.querySelector(".popup").classList.contains("active")) {
-      document.querySelector(".popup").classList.remove("active");
-    }
-  });
-});
 //variables for secondary slider products popup
 const sliderProductsSecondary = document.querySelector(
   ".slider-products-popup"
 );
 const sliderProductsImages = sliderProductsSecondary.querySelectorAll("img");
 const selectedImage = document.querySelector(".primary-product-popup-image");
+
+let count = 0;
+
 
 //Menu icon toggle to show and hide the navigation menu
 menuIcon.addEventListener("click", () => {
@@ -106,8 +101,6 @@ function changePopupImages() {
   previous.addEventListener("click", previousImage);
 }
 
-changePopupImages();
-let count = 0;
 
 function addItemsToCart() {
   document.querySelector(".add").style.cursor = "pointer";
@@ -126,7 +119,7 @@ function addItemsToCart() {
   document.getElementById("add-to-cart").addEventListener("click", () => {
     document.querySelector(".cart-count span").textContent =
       document.querySelector(".amount").textContent;
-      document.querySelector(".payout-total").textContent =
+    document.querySelector(".payout-total").textContent =
       "$" + 125 * document.querySelector(".amount").textContent;
     document.querySelector(".cart-count").classList.add("open-cart");
   });
@@ -143,6 +136,14 @@ function addItemsToCart() {
       .classList.remove("open-checkout-container");
     alert("Your order will be processed once we integrate checkout!");
     document.querySelector(".cart-count").classList.remove("open-cart");
+  });
+  selectedImagePrimary.addEventListener("click", () => {
+    document.querySelector(".popup").classList.add("active");
+    document.querySelector(".close-btn").addEventListener("click", () => {
+      if (document.querySelector(".popup").classList.contains("active")) {
+        document.querySelector(".popup").classList.remove("active");
+      }
+    });
   });
 }
 
@@ -162,3 +163,4 @@ document.addEventListener("DOMContentLoaded", () => {
 changePrimaryImages();
 changeSecondaryImages();
 addItemsToCart();
+changePopupImages();

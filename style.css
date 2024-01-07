@@ -385,7 +385,6 @@ main .popup {
   top: 0;
   display: flex;
   flex-direction: column;
-  z-index: 999;
   display: none;
 }
 main .popup .primary-product-popup {

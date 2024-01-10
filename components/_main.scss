@@ -144,12 +144,12 @@ main {
       position: relative;
 
       .primary-product-popup-image {
-        width: 500px;
+        width: 400px;
         margin: 0 auto;
         border-radius: 16px;
       }
       .close-btn {
-        margin-left: 70%;
+        margin-left: 65%;
         margin-bottom: 20px;
         cursor: pointer;
       }
@@ -166,10 +166,10 @@ main {
         cursor: pointer;
       }
       .next-icon {
-        right: 25.5%;
+        right:30%;
       }
       .previous-icon {
-        left: 25.5%;
+        left:30%;
       }
       .next-icon:hover,
       .previous-icon:hover {
@@ -198,6 +198,8 @@ main {
   .popup.active {
     display: block;
   }
+  
+  
 }
 @media (max-width: 37.5em) {
   main {

@@ -19,7 +19,6 @@ const selectedImage = document.querySelector(".primary-product-popup-image");
 
 let count = 0;
 
-
 //Menu icon toggle to show and hide the navigation menu
 menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle("active");
@@ -101,7 +100,6 @@ function changePopupImages() {
   previous.addEventListener("click", previousImage);
 }
 
-
 function addItemsToCart() {
   document.querySelector(".add").style.cursor = "pointer";
   document.querySelector(".minus").style.cursor = "pointer";
@@ -116,20 +114,40 @@ function addItemsToCart() {
       document.querySelector(".amount").textContent = count -= 1;
     }
   });
+  //click add to cart button
   document.getElementById("add-to-cart").addEventListener("click", () => {
+    document.querySelector(".cart-count").classList.add("open-cart");
     document.querySelector(".cart-count span").textContent =
+      document.querySelector(".amount").textContent;
+    document.querySelector(".counted-items").textContent =
       document.querySelector(".amount").textContent;
     document.querySelector(".payout-total").textContent =
       "$" + 125 * document.querySelector(".amount").textContent;
-    document.querySelector(".cart-count").classList.add("open-cart");
   });
+  // click cart icon and display checkout container
   document.querySelector(".cart-icon").addEventListener("click", () => {
     document
       .querySelector(".checkout-container")
       .classList.toggle("open-checkout-container");
-    document.querySelector(".counted-items").textContent =
-      document.querySelector(".amount").textContent;
+
+    if (document.querySelector(".amount").textContent <= 0) {
+      document.querySelector(".cart-empty").style.display = "block";
+      document.querySelector(".checkout-details").style.display = "none";
+      document.querySelector(".checkout").style.display = "none";
+    } else {
+      document.querySelector(".cart-empty").style.display = "none";
+      document.querySelector(".checkout-details").style.display = "flex";
+      document.querySelector(".checkout").style.display = "block";
+    }
+
+    document.querySelector(".delete").addEventListener("click", () => {
+      document.querySelector(".cart-empty").style.display = "block";
+      document.querySelector(".checkout-details").style.display = "none";
+      document.querySelector(".checkout").style.display = "none";
+      document.querySelector(".cart-count").classList.remove("open-cart");
+    });
   });
+
   document.querySelector(".checkout").addEventListener("click", () => {
     document
       .querySelector(".checkout-container")
@@ -145,6 +163,7 @@ function addItemsToCart() {
       }
     });
   });
+
 }
 
 //adding active class to the first image in the primary list

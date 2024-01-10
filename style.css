@@ -176,6 +176,13 @@ header .header .checkout-container .checkout-details .delete {
   width: 16px;
   cursor: pointer;
 }
+header .header .checkout-container .cart-empty {
+  display: none;
+  color: hsl(220, 14%, 75%);
+  font-weight: 700;
+  text-align: center;
+  margin-block-start: 1.5em;
+}
 header .header .checkout-container button {
   width: 100%;
   border: none;
@@ -191,12 +198,6 @@ header .header .checkout-container button {
 }
 header .header .checkout-container button:hover {
   opacity: 0.7;
-}
-header .header .checkout-container .cart-empty {
-  color: hsl(220, 14%, 75%);
-  font-weight: 700;
-  text-align: center;
-  margin-block-start: 1.5em;
 }
 header .header .open-checkout-container {
   display: block;
@@ -391,12 +392,12 @@ main .popup .primary-product-popup {
   position: relative;
 }
 main .popup .primary-product-popup .primary-product-popup-image {
-  width: 500px;
+  width: 400px;
   margin: 0 auto;
   border-radius: 16px;
 }
 main .popup .primary-product-popup .close-btn {
-  margin-left: 70%;
+  margin-left: 65%;
   margin-bottom: 20px;
   cursor: pointer;
 }
@@ -413,10 +414,10 @@ main .popup .primary-product-popup .next-icon {
   cursor: pointer;
 }
 main .popup .primary-product-popup .next-icon {
-  right: 25.5%;
+  right: 30%;
 }
 main .popup .primary-product-popup .previous-icon {
-  left: 25.5%;
+  left: 30%;
 }
 main .popup .primary-product-popup .next-icon:hover,
 main .popup .primary-product-popup .previous-icon:hover {

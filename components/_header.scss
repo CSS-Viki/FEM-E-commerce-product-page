@@ -146,6 +146,14 @@ header {
           cursor: pointer;
         }
       }
+      
+      .cart-empty {
+        display: none;
+        color: $Grayish-blue;
+        font-weight: 700;
+        text-align: center;
+        margin-block-start: 1.5em;
+      }
       button {
         width: 100%;
         border: none;
@@ -161,12 +169,6 @@ header {
       }
       button:hover {
         opacity: 0.7;
-      }
-      .cart-empty {
-        color: $Grayish-blue;
-        font-weight: 700;
-        text-align: center;
-        margin-block-start: 1.5em;
       }
     }
     .open-checkout-container {
